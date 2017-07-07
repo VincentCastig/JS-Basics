@@ -5,7 +5,15 @@ var name = 'Tyler';
 //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 
   //Code Here
-
+  function isTyler(name){
+    if (name ==="Tyler"){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+  isTyler("Tyler");
 //////////////////PROBLEM 2////////////////////
 
 
@@ -13,7 +21,10 @@ var name = 'Tyler';
 
 
   //Code Here
-
+  function getName(userName){
+    var userName = prompt("What is your name");
+      return userName;
+  }
 
 //////////////////PROBLEM 3////////////////////
 
@@ -24,6 +35,9 @@ var name = 'Tyler';
 
   //Code Here
 
+  function welcome(name){
+    return alert("Welcome, " + getName());
+  }
 
 //////////////////PROBLEM 4////////////////////
 
@@ -33,7 +47,7 @@ var name = 'Tyler';
 //What is the difference between arguments and parameters?
 
   //Answer Here
-
+//Arguments are the inputs called into the function. Parameters are only the arguments that are accepted by the function
 
 //////////////////PROBLEM 5////////////////////
 
@@ -43,7 +57,7 @@ var name = 'Tyler';
 
 
   //Answer Here
-
+//falsy value = [0, NaN, NULL, "", undefined]
 
 
 //////////////////PROBLEM 6////////////////////
@@ -53,15 +67,17 @@ var name = 'Tyler';
 //Create a function called myName that returns your name
 
   //Code Here
-  
+  function myName(){
+    return "Vincent Castigliola";
+  }
 
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
-
+var newMyName = myName;
 //Now alert the result of invoking newMyName
-
+alert(newMyName);
 
 
 //////////////////PROBLEM 7////////////////////
@@ -71,9 +87,14 @@ var name = 'Tyler';
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
-
+  function outerFn(){
+      return function(){
+        return "Vincent Castigliola";
+    };
+  }
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
-
+  var innerFn = outerFn();
 //Now invoke innerFn.
+innerFn();
